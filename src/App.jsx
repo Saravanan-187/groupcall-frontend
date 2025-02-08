@@ -11,7 +11,7 @@ const App = () => {
 
   // Fetch Groups from Backend
   useEffect(() => {
-    axios.get("https://backend-i4ya.onrender.com/groups")
+    axios.get("https://groupcall-backend.onrender.com/groups")
       .then((res) => setGroups(res.data))
       .catch((err) => console.error("❌ Error Fetching Groups:", err));
   }, []);
@@ -22,7 +22,7 @@ const App = () => {
     if (!groupName || !members) return alert("⚠️ Please fill in all fields!");
     
     try {
-      const res = await axios.post("https://backend-i4ya.onrender.com/groups", {
+      const res = await axios.post("https://groupcall-backend.onrender.com/groups", {
         name: groupName,
         members: members.split(","),
       });
