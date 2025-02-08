@@ -1,92 +1,96 @@
-/* 🌟 Modern Aesthetic Styles */
-
-/* Full Page Background */
+/* 🌟 Light Gradient Background (Soft Blue) */
 body {
-    background: linear-gradient(135deg, #1e1e2f, #3a3a6e);
-    color: white;
-    font-family: 'Poppins', sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
-  }
-  
-  /* Glassmorphism Effect */
-  .glassmorphism {
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(12px);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    border-radius: 12px;
-    padding: 20px;
-    width: 90%;
-    max-width: 400px;
-    text-align: center;
-  }
-  
-  /* 🌍 Centered Heading */
-  .heading {
-    font-size: 28px;
-    font-weight: bold;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 8px;
-  }
-  
-  /* 🔍 Input Box Styles */
-  .input-box {
-    width: 100%;
-    padding: 12px 15px;
-    border-radius: 10px;
-    background: rgba(255, 255, 255, 0.1);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    color: white;
-    font-size: 16px;
-    outline: none;
-    transition: 0.3s ease-in-out;
-    backdrop-filter: blur(8px);
-  }
-  
-  /* ✨ Glow effect on focus */
-  .input-box:focus {
-    border-color: #4f46e5;
-    box-shadow: 0px 0px 8px rgba(79, 70, 229, 0.8);
-  }
-  
-  /* 🎨 Placeholder Styling */
-  .input-box::placeholder {
-    color: rgba(255, 255, 255, 0.6);
-  }
-  
-  /* 🔘 Button Styling */
-  .btn {
-    width: 100%;
-    padding: 12px;
-    border-radius: 10px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: 0.3s ease-in-out;
-  }
-  
-  /* 🟢 Primary Button */
-  .btn-primary {
-    background: #4f46e5;
-    color: white;
-  }
-  
-  .btn-primary:hover {
-    background: #3b38c2;
-    transform: scale(1.05);
-  }
-  
-  /* 🔍 Search Button */
-  .btn-search {
-    background: rgba(255, 255, 255, 0.1);
-    color: white;
-  }
-  
-  .btn-search:hover {
-    background: rgba(255, 255, 255, 0.2);
-  }
-  
+  background: linear-gradient(to right, #4facfe, #00f2fe); 
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* 🏆 Centered Container (Keeps Existing Design) */
+.container {
+  text-align: center;
+  padding: 30px;
+  border-radius: 12px;
+  background: rgba(0, 0, 0, 0.3);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(10px);
+  color: white;
+  max-width: 600px;
+  width: 90%;
+  margin: auto;
+}
+
+/* 📌 Smaller Input Boxes */
+.input-box {
+  width: 250px;  /* More compact */
+  padding: 8px;
+  font-size: 14px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  text-align: center;
+  transition: all 0.3s ease-in-out;
+  display: block;
+  margin: 10px auto;
+}
+
+/* 🔵 Input Hover & Focus */
+.input-box:focus, .input-box:hover {
+  outline: none;
+  border-color: #ffffff;
+  box-shadow: 0px 0px 8px rgba(255, 255, 255, 0.4);
+}
+
+/* 🔘 Create Group Button */
+.create-group-btn {
+  background: linear-gradient(145deg, #4f8ef7, #6e7ccf); /* Light blue gradient */
+  color: white;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0px 4px 10px rgba(79, 142, 247, 0.3);
+  width: 100%; /* Full width */
+}
+
+.create-group-btn:hover, .create-group-btn:focus {
+  background: linear-gradient(145deg, #6e7ccf, #4f8ef7); /* Reversed gradient for hover */
+  box-shadow: 0px 6px 15px rgba(79, 142, 247, 0.4);
+  transform: translateY(-2px);
+}
+
+.create-group-btn:active {
+  background: linear-gradient(145deg, #4f8ef7, #6e7ccf);
+  transform: translateY(2px);
+}
+
+
+/* 📹 Start Video Call Button */
+.start-video-btn {
+  background: linear-gradient(145deg, #ff7e5f, #feb47b); /* Warm gradient for video call */
+  color: white;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0px 4px 10px rgba(255, 126, 95, 0.3);
+  width: 100%; /* Full width */
+}
+
+.start-video-btn:hover, .start-video-btn:focus {
+  background: linear-gradient(145deg, #feb47b, #ff7e5f); /* Reversed gradient on hover */
+  box-shadow: 0px 6px 15px rgba(255, 126, 95, 0.4);
+  transform: translateY(-2px);
+}
+
+.start-video-btn:active {
+  background: linear-gradient(145deg, #ff7e5f, #feb47b);
+  transform: translateY(2px);
+}
