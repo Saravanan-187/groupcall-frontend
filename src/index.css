@@ -1,0 +1,92 @@
+/* 🌟 Modern Aesthetic Styles */
+
+/* Full Page Background */
+body {
+    background: linear-gradient(135deg, #1e1e2f, #3a3a6e);
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+  }
+  
+  /* Glassmorphism Effect */
+  .glassmorphism {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 12px;
+    padding: 20px;
+    width: 90%;
+    max-width: 400px;
+    text-align: center;
+  }
+  
+  /* 🌍 Centered Heading */
+  .heading {
+    font-size: 28px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+  }
+  
+  /* 🔍 Input Box Styles */
+  .input-box {
+    width: 100%;
+    padding: 12px 15px;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: white;
+    font-size: 16px;
+    outline: none;
+    transition: 0.3s ease-in-out;
+    backdrop-filter: blur(8px);
+  }
+  
+  /* ✨ Glow effect on focus */
+  .input-box:focus {
+    border-color: #4f46e5;
+    box-shadow: 0px 0px 8px rgba(79, 70, 229, 0.8);
+  }
+  
+  /* 🎨 Placeholder Styling */
+  .input-box::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+  }
+  
+  /* 🔘 Button Styling */
+  .btn {
+    width: 100%;
+    padding: 12px;
+    border-radius: 10px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+  }
+  
+  /* 🟢 Primary Button */
+  .btn-primary {
+    background: #4f46e5;
+    color: white;
+  }
+  
+  .btn-primary:hover {
+    background: #3b38c2;
+    transform: scale(1.05);
+  }
+  
+  /* 🔍 Search Button */
+  .btn-search {
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+  }
+  
+  .btn-search:hover {
+    background: rgba(255, 255, 255, 0.2);
+  }
+  
