@@ -77,14 +77,22 @@ const VideoCall = () => {
     a.click();
   };
 
-  // Handle New Comment Submission
+  // Handle New Comment Submission with regex validation
   const handleCommentSubmit = () => {
+    // Regex to allow only alphabets, numbers, and spaces
+    const commentRegex = /^[a-zA-Z0-9 ]+$/;
+
     if (newComment) {
-      setComments([
-        ...comments,
-        { text: newComment, city: city, likes: 0, dislikes: 0 },
-      ]);
-      setNewComment(""); // Clear input field
+      // Check if the comment matches the regex
+      if (commentRegex.test(newComment)) {
+        setComments([
+          ...comments,
+          { text: newComment, city: city, likes: 0, dislikes: 0 },
+        ]);
+        setNewComment(""); // Clear input field
+      } else {
+        alert("Comment can only contain alphabets and numbers.");
+      }
     }
   };
 
