@@ -1,22 +1,20 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import VideoCall from "./VideoCall"; // Import Video Call Component
+import VideoCall from "./VideoCall";
 
 const App = () => {
   const [groupName, setGroupName] = useState("");
   const [members, setMembers] = useState("");
   const [searchQuery, setSearchQuery] = useState("");
   const [groups, setGroups] = useState([]);
-  const [showVideoCall, setShowVideoCall] = useState(false); // Toggle Video Call UI
+  const [showVideoCall, setShowVideoCall] = useState(false);
 
-  // Fetch Groups from Backend
   useEffect(() => {
     axios.get("https://groupcall-backend.onrender.com/groups")
       .then((res) => setGroups(res.data))
       .catch((err) => console.error("❌ Error Fetching Groups:", err));
   }, []);
 
-  // Handle Create Group
   const handleCreateGroup = async (e) => {
     e.preventDefault();
     if (!groupName || !members) return alert("⚠️ Please fill in all fields!");
@@ -26,14 +24,13 @@ const App = () => {
         name: groupName,
         members: members.split(","),
       });
-      setGroups([...groups, res.data]); // Update UI
-      setGroupName(""); setMembers(""); // Clear Input Fields
+      setGroups([...groups, res.data]);
+      setGroupName(""); setMembers("");
     } catch (err) {
       console.error("❌ Error Creating Group:", err);
     }
   };
 
-  // Filter Groups for Search
   const filteredGroups = groups.filter((group) =>
     group.name.toLowerCase().includes(searchQuery.toLowerCase())
   );
