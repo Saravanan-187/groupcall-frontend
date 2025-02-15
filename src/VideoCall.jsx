@@ -77,26 +77,23 @@ const VideoCall = () => {
     a.click();
   };
 
-  // Handle New Comment Submission with regex validation
   const handleCommentSubmit = () => {
-    // Regex to allow only alphabets, numbers, and spaces
     const commentRegex = /^[a-zA-Z0-9 ]+$/;
 
     if (newComment) {
-      // Check if the comment matches the regex
       if (commentRegex.test(newComment)) {
         setComments([
           ...comments,
           { text: newComment, city: city, likes: 0, dislikes: 0 },
         ]);
-        setNewComment(""); // Clear input field
+        setNewComment(""); 
       } else {
         alert("Comment can only contain alphabets and numbers.");
       }
     }
   };
 
-  // Handle Like/Dislike for a Comment
+  
   const handleLike = (index) => {
     const updatedComments = [...comments];
     updatedComments[index].likes += 1;
@@ -107,7 +104,6 @@ const VideoCall = () => {
     const updatedComments = [...comments];
     updatedComments[index].dislikes += 1;
 
-    // Remove comment if dislikes >= 2
     if (updatedComments[index].dislikes >= 2) {
       updatedComments.splice(index, 1);
     }
@@ -115,9 +111,8 @@ const VideoCall = () => {
     setComments(updatedComments);
   };
 
-  // Translate Comment (For demo, simply appending " (translated)" text)
   const handleTranslate = (text) => {
-    setTranslatedComment(`${text} (translated)`); // In a real-world scenario, you'd integrate an actual translation API
+    setTranslatedComment(`${text} (translated)`);
   };
 
   return (
